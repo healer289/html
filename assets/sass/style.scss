@@ -1,0 +1,48 @@
+// Sass variables for responsiveness
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+// Mixin for mobile
+@mixin mobile {
+    @media (max-width: #{$mobile-width}) {
+        @content;
+    }
+}
+
+// Mixin for tablet
+@mixin tablet {
+    @media (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+// Mixin for desktop
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+// Centers elements within a container
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+// Imports background gradient mixin for the background
+@import "bg";
+
+// Imports variables, mixin and properties related to the text
+@import "text";
+
+// Imports extended CSS selectors, mixins and properties related to the buttons
+@import "buttons";
+
+// Imports variables, properties, mixins and keyframes related to the header image
+@import 'headerimg';
+
+// Imports footer elements
+@import 'footer';

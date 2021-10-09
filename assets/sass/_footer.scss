@@ -1,0 +1,37 @@
+footer {
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 120px;
+}
+
+// Mixin to round the corners of the header image
+@mixin rounded($radius: 0.5em) {
+    -webkit-border-radius: .5em; 
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+}
+
+// Mixin that gives a box shadow to the header image
+@mixin box-shadow($x-axis: 3px, $y-axis: 3px, $blur: 8px, $color: #7c7c7c) {
+    box-shadow: $x-axis $y-axis $blur $color;
+}
+
+// Both header images include the box shadow and the rounded corners
+#hireMePic {
+    float: left;
+    @include box-shadow;
+    @include rounded(1px);
+}
+
+// Paragraph containing Hire Me bio
+.hireBio {
+    font-family: $ff2;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+// Font Awesome icons
+.fab, .far {
+    color: #49343f;
+
+}

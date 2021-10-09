@@ -1,0 +1,11 @@
+// Mixin for the background gradient
+@mixin bg-gradient($angle: 200deg, $color: #b0cce0, $color2: #efdb81, $amount: 40%) {
+    background: linear-gradient($angle, $color, $color2, adjust-hue($color, $amount)) fixed;
+}
+
+// Body includes the background gradient
+body {
+    @include bg-gradient;
+    margin: 0px;
+    padding: 0px;
+}

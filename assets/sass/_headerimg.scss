@@ -1,0 +1,76 @@
+// Mixin to round the corners of the header image
+@mixin rounded($radius: 0.5em) {
+    -webkit-border-radius: .5em; 
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+}
+
+// Mixin that gives a box shadow to the header image
+@mixin box-shadow($x-axis: 3px, $y-axis: 3px, $blur: 8px, $color: #7c7c7c) {
+    box-shadow: $x-axis $y-axis $blur $color;
+}
+
+// Both header images include the box shadow and the rounded corners
+#screenshot, #screenshot02 {
+    margin-top: 30px;
+    @include box-shadow;
+    @include rounded(1px);
+}
+
+// Properties for the div containing the images 
+#cf {
+    position: relative;
+    height: 375px;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+// Hover style properties
+%hoverstyle {
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+// Image in #cf div have the hover style extended to it
+#cf img {
+    position: absolute;
+    @extend %hoverstyle;
+
+    @include tablet {
+        width: 85%;
+        left: 40px;
+    }
+
+    @include mobile {
+        width: 70%;
+        left: 10px;
+    }
+}
+
+// Keyframe animations that gives a Fade In and Out effect
+@keyframes cfFadeInOut {
+    0% {
+        opacity:1;
+    }
+    45% {
+        opacity:1;
+    }
+    55% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
+}
+  
+// Fade in and out effect applied to the top image
+#cf img.top {
+  animation-name: cfFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate;
+}

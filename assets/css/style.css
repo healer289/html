@@ -1,0 +1,210 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+header{
+  margin: 0 60px;
+}
+
+body {
+  background: linear-gradient(200deg, #b0cce0, #efdb81, #b4b0e0) fixed;
+  margin: 100px 80px;
+  padding: px;
+}
+img {
+  width: 100%;
+}
+
+h1 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 70px;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 auto;
+  opacity: 0.9;
+  margin-top: 100px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+h2 {
+  font-family: "Quicksand", sans-serif;
+  font-style: italic;
+  font-size: 40px;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 auto;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 27px;
+  }
+}
+
+h7 {
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+}
+@media (max-width: 480px) {
+  h7 {
+    font-size: 14px;
+  }
+}
+
+.buttonContainer {
+  display: block;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 90px;
+}
+@media (max-width: 768px) {
+  .buttonContainer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 480px) {
+  .buttonContainer {
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+}
+
+#downloadButton, #repoButton {
+  background: #d2d2d2;
+  padding: 10px 30px;
+  color: #232323;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  -moz-box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.4), inset -1px -1px 1px #d3d3d3;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.4), inset -1px -1px 1px #d3d3d3;
+  box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.4), inset -1px -1px 1px #d3d3d3;
+  border-radius: 5px 5px 5px 5px;
+  margin: 0 auto;
+}
+
+#downloadButton, #repoButton {
+  background: #a1f4f7;
+}
+#downloadButton:hover, #repoButton:hover {
+  background: #7bf0f4;
+  transition: all 0.3s ease;
+}
+#downloadButton:active, #repoButton:active {
+  background: #2ce6ed;
+}
+@media (max-width: 768px) {
+  #downloadButton, #repoButton {
+    display: inline-block;
+    margin: 5px;
+  }
+}
+
+#screenshot, #screenshot02 {
+  margin-top: 30px;
+  box-shadow: 3px 3px 8px #7c7c7c;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+}
+
+#cf {
+  position: relative;
+  height: 375px;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 600px;
+}
+
+#cf img {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#cf img {
+  position: absolute;
+}
+@media (max-width: 768px) {
+  #cf img {
+    width: 85%;
+    left: 40px;
+  }
+}
+@media (max-width: 480px) {
+  #cf img {
+    width: 70%;
+    left: 10px;
+  }
+}
+
+@keyframes cfFadeInOut {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#cf img.top {
+  animation-name: cfFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate;
+}
+
+footer {
+  margin: 0 auto;
+  width: 60%;
+  margin-bottom: 120px;
+}
+
+#hireMePic {
+  float: left;
+  box-shadow: 3px 3px 8px #7c7c7c;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+}
+
+.hireBio {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.fab, .far {
+  color: #49343f;
+}
+
+/*# sourceMappingURL=style.css.map */

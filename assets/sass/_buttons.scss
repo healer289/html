@@ -1,0 +1,57 @@
+// Contains both buttons
+.buttonContainer {
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 90px;
+
+    @include tablet {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    @include mobile {
+        margin-top: 10px;
+        margin-bottom: 35px;
+    }
+}
+
+// Mixin that changes background when it is hovered or active
+@mixin button-bg($bg) {
+    background: $bg;
+    &:hover {
+        background: darken($bg, 8%);
+        transition: all 0.3s ease;
+    }
+    &:active {
+        background:darken($bg, 25%);
+    }
+}
+
+// Button style CSS elector extended (with following properties)
+%button-style {
+    background: #d2d2d2;
+    padding: 10px 30px;
+    color: #232323;
+    letter-spacing: 1px;
+    font-family: $ff2;
+    text-decoration: none;
+    font-size: 20px;
+    -moz-box-shadow: inset 1px 1px 1px rgba(255, 255, 255, .4), inset -1px -1px 1px #d3d3d3;
+    -webkit-box-shadow: inset 1px 1px 1px rgba(255, 255, 255, .4), inset -1px -1px 1px #d3d3d3;
+    box-shadow: inset 1px 1px 1px rgba(255, 255, 255, .4), inset -1px -1px 1px #d3d3d3;
+    border-radius: 5px 5px 5px 5px;
+    margin: 0 auto;
+}
+
+// Both buttons include the button background mixin and extended button style
+#downloadButton, #repoButton {
+    @include button-bg(#a1f4f7);
+    @extend %button-style;
+
+    @include tablet {
+        display: inline-block;
+        margin: 5px;
+    }
+}

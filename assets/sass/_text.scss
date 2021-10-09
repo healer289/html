@@ -1,0 +1,53 @@
+// Two font styles
+$ff: 'Quicksand', sans-serif;
+$ff2: 'Poppins', sans-serif;
+
+// Text shadow mixin for header text
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 10px, $color: rgba(0,0,0,.4)) {
+    text-shadow: $x $y $blur $color;
+}
+
+// Header 1 text includes text shadow and is responsive
+h1 {
+    font-family: $ff;
+    font-size: 70px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+    opacity: 0.9;
+    margin-top: 100px;
+    @include text-shadow;
+    @include tablet {
+        font-size: 60px;
+    }
+    @include mobile {
+        font-size: 50px;
+    }
+}
+
+// Header 2 text (subtitle) includes text shadow and is responsive
+h2 {
+    font-family: $ff;
+    font-style: italic;
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+    @include text-shadow;
+    @include tablet {
+        font-size: 36px;
+    }
+    @include mobile {
+        font-size: 27px;
+    }
+}
+
+// Name of web developer
+h7 {
+    color: #fff;
+    @include text-shadow;
+    font-size: 20px;
+    @include mobile {
+        font-size: 14px;
+    }
+}
